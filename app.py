@@ -11,7 +11,6 @@ def getDBData():
     exec = conn.getAllUserData()
     return render_template('index.html',len=len(exec), data=exec)
 
-
 if __name__ == '__main__':
     app.config['SESSION_TYPE'] = 'filesystem'
     app.config['SECRET_KEY'] = os.urandom(64)

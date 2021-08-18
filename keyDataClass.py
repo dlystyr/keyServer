@@ -11,7 +11,7 @@ class KeyDataConn:
         exec = self.cur.execute('SELECT * from person_table')
         userList = []
         for row in exec:
-            userList.append([row[0], row[1], row[2]])
+            userList.append([row[0], row[1], row[2], row[3]])
 
         return userList
 
