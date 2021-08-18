@@ -16,13 +16,14 @@
         <div class="col">
           <br/>
         </div>
-        <div class="col">
+        <div class="col-lg-8">
         <br/><br/>
           <table class="table table-primary table-striped">
             <th>
               <td>Username</td>
               <td>Jobs Complete</td>
               <td>Jobs Rejected</td>
+              <td>Delta</td>
             </th>
             {%for i in range(0, len)%}
                 <tr>
@@ -30,6 +31,7 @@
                     <td>{{ data[i][1] }}</td>
                     <td>{{ data[i][2] }}</td>
                     <td>{{ data[i][3] }}</td>
+                    <td>{{ data[i][2] - data[i][3] }}</td>
                 </tr>
             {%endfor%}
           </table>
